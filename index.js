@@ -52,4 +52,96 @@ function init() {
     });
 }
 
+// function to prompt user to add an employee (engineer or intern) or finish building the team
+function addEmployee() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "employeeRole",
+        message: "Which type of team member would you like to add?",
+        choices: ["Engineer", "Intern", "Finish building team"],
+      },
+    ])
+    .then((answers) => {
+      // check what type of employee user wants to add
+      if (answers.employeeRole === "Engineer") {
+        // prompt user for engineer information
+        inquirer
+          .prompt([
+            {
+              type: "input",
+              name: "engineerName",
+              message: "What is the engineer's name?",
+            },
+            {
+              type: "input",
+              name: "engineerId",
+              message: "What is the engineer's ID?",
+            },
+            {
+              type: "input",
+              name: "engineerEmail",
+              message: "What is the engineer's email?",
+            },
+            {
+              type: "input",
+              name: "engineerGithub",
+              message: "What is the engineer's GitHub username?",
+            },
+          ])
+          .then((answers) => {
+            // create new Engineer object
+            let engineer = new Engineer(
+              answers.engineerName,
+              answers.engineerId,
+              answers.engineerEmail,
+              answers.engineerGithub
+            );
+            employeeArray.push(engineer); // add engineer to employee array
+            // call addEmployee function
+            addEmployee();
+          });
+      } else if (answers.employeeRole === "Intern") {
+        // prompt user for intern information
+        inquirer
+          .prompt([
+            {
+              type: "input",
+              name: "internName",
+              message: "What is the intern's name?",
+            },
+            {
+              type: "input",
+              name: "internId",
+              message: "What is the intern's ID?",
+            },
+            {
+              type: "input",
+              name: "internEmail",
+              message: "What is the intern's email?",
+            },
+            {
+              type: "input",
+              name: "internSchool",
+              message: "What is the intern's school?",
+            },
+          ])
+          .then((answers) => {
+            // create new Intern object
+            let intern = new Intern(
+              answers.internName,
+              answers.internId,
+              answers.internEmail,
+              answers.internSchool
+            );
+            employeeArray.push(intern); // add intern to employee array
+            // call addEmployee function
+            addEmployee();
+          });
+      }
+      // if user is done adding employees, call renderTeam function
+    });
+}
+
 init();
