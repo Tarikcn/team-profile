@@ -60,8 +60,8 @@ node index.js
 ### Deployment Live URL
 
 - Deployment URL :
-  https://github.com/Tarikcn/readme-generator/
-
+ https://github.com/Tarikcn/team-profile
+ 
 ### Test Recording
 
 -
