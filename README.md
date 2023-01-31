@@ -62,15 +62,26 @@ node index.js
 - Deployment URL :
   https://github.com/Tarikcn/readme-generator/
 
-### Test Screenshot
+### Test Recording
 
 -
+
+https://user-images.githubusercontent.com/115656280/215829788-64ae38ac-584d-4a6d-a182-3585621126af.mp4
+
+
 
 ### Screen Recording
 
 Walkthrough video:
 
+
+
+https://user-images.githubusercontent.com/115656280/215829946-81b46325-35e5-458c-a5d5-c272a576b9ba.mp4
+
+
+
 ### Web App Screenshot
+![image](https://user-images.githubusercontent.com/115656280/215829551-614d4726-cfdc-4821-9cd5-71151908083a.png)
 
 ## License
 
